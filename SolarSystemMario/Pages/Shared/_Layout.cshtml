@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SolarSystemMario</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <a class="active" href="index.html">Solar system</a>
+            <div class="language-buttons">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <div onclick="selectLanguage('eng');">
+                            <div class="language-button"
+                                 id="englishButton"
+                                 style="
+                  background-image: url('https://github.com/Mart6110/SolarSystemFrontend/blob/main/img/003-united-kingdom.png?raw=true');
+                "></div>
+                            <p>English</p>
+                        </div>
+                        <div onclick="selectLanguage('dan');">
+                            <div class="language-button"
+                                 id="danishButton"
+                                 style="
+                  background-image: url('https://github.com/Mart6110/SolarSystemFrontend/blob/main/img/002-denmark.png?raw=true');
+                "></div>
+                            <p>Dansk</p>
+                        </div>
+                        <div onclick="selectLanguage('est');">
+                            <div class="language-button"
+                                 id="estonianButton"
+                                 style="
+                  background-image: url('https://github.com/Mart6110/SolarSystemFrontend/blob/main/img/001-estonia.png?raw=true');
+                "></div>
+                            <p>Eesti</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - SolarSystemMario - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/kaboom@3000.0.1/dist/kaboom.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
