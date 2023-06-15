@@ -5,10 +5,30 @@
 }
 
 <section>
-    <canvas id="kaboomCanvas"></canvas>
-    <div id="infoPanel1">@Html.DisplayNameFor(model => model.planet.Name) is @Html.DisplayNameFor(model => model.planet.Size) big.</div>
-    <div id="infoPanel2">@Html.DisplayNameFor(model => model.planet.Name) has this @Html.DisplayNameFor(model => model.planet.Number_Of_Moons) moons.</div>
-    <div id="infoPanel3">The lenght of a year on @Html.DisplayNameFor(model => model.planet.Name) is @Html.DisplayNameFor(model => model.planet.Length_Of_Year) days.</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.planets[0].Name)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.planets)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        <a asp-page="./Planet" asp-route-id="@item.Id">Details</a>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
 </section>
 
 

@@ -12,19 +12,18 @@ namespace SolarSystemMario.Pages
     public class IndexModel : PageModel
     {
         PlanetDAL objplanet = new PlanetDAL();
-        public Planet planet { get; set; }
+        public List<Planet> planets { get; set; }
 
+        public void OnGet()
+        {
+            planets = objplanet.GetAllPlanets().ToList();
+        }
 
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
-        }
-
-        public void OnGet()
-        {
-
         }
     }
 }

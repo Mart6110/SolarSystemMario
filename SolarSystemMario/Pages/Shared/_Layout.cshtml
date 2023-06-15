@@ -13,33 +13,21 @@
 <body>
     <header>
         <nav class="topnav">
-            <a class="active" href="">Solar system</a>
+            <a class="active" asp-page="./index">Solar system</a>
             <div class="language-buttons">
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                    <button onclick="myFunction()" class="dropbtn">Language</button>
                     <div id="myDropdown" class="dropdown-content">
                         <div onclick="selectLanguage('eng');">
-                            <div class="language-button"
-                                 id="englishButton"
-                                 style="
-                  background-image: url('https://github.com/Mart6110/SolarSystemFrontend/blob/main/img/003-united-kingdom.png?raw=true');
-                "></div>
+                            <img src="~/img/003-united-kingdom.png" />
                             <p>English</p>
                         </div>
                         <div onclick="selectLanguage('dan');">
-                            <div class="language-button"
-                                 id="danishButton"
-                                 style="
-                  background-image: url('https://github.com/Mart6110/SolarSystemFrontend/blob/main/img/002-denmark.png?raw=true');
-                "></div>
+                            <img src="~/img/002-denmark.png" />
                             <p>Dansk</p>
                         </div>
                         <div onclick="selectLanguage('est');">
-                            <div class="language-button"
-                                 id="estonianButton"
-                                 style="
-                  background-image: url('https://github.com/Mart6110/SolarSystemFrontend/blob/main/img/001-estonia.png?raw=true');
-                "></div>
+                            <img src="~/img/001-estonia.png" />
                             <p>Eesti</p>
                         </div>
                     </div>
@@ -61,9 +49,7 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/kaboom@next/dist/kaboom.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

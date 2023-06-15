@@ -1,0 +1,17 @@
+﻿@page
+@model SolarSystemMario.Pages.PlanetModel
+@{
+    ViewData["Title"] = @Html.DisplayFor(model => model.planet.Size);
+}
+
+<section>
+    <canvas id="kaboomCanvas"></canvas>
+    <div id="infoPanel1">@Html.DisplayFor(model => model.planet.Name) is @Html.DisplayFor(model => model.planet.Size) km in radius.</div>
+    <div id="infoPanel2">@Html.DisplayFor(model => model.planet.Name) has @Html.DisplayFor(model => model.planet.Number_Of_Moons) moons.</div>
+    <div id="infoPanel3">The lenght of a year on @Html.DisplayFor(model => model.planet.Name) is @Html.DisplayFor(model => model.planet.Length_Of_Year) days.</div>
+</section>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/kaboom@next/dist/kaboom.js"></script>
+<script src="~/js/game.js" asp-append-version="true"></script>
