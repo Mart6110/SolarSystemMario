@@ -6,7 +6,12 @@
 
 <section>
     <canvas id="kaboomCanvas"></canvas>
+    <div id="infoPanel1">@Html.DisplayNameFor(model => model.planet.Name) is @Html.DisplayNameFor(model => model.planet.Size) big.</div>
+    <div id="infoPanel2">@Html.DisplayNameFor(model => model.planet.Name) has this @Html.DisplayNameFor(model => model.planet.Number_Of_Moons) moons.</div>
+    <div id="infoPanel3">The lenght of a year on @Html.DisplayNameFor(model => model.planet.Name) is @Html.DisplayNameFor(model => model.planet.Length_Of_Year) days.</div>
 </section>
+
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

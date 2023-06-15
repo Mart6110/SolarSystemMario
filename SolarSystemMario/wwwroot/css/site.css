@@ -34,10 +34,19 @@
 }
 
 section {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 90dvh;
+}
+
+section div {
+    position: absolute;
+    color: white;
+    top: 25%;
+    left: 20%;
+    transform: translate(-20%, -25%);
 }
 
 .dropbtn {
