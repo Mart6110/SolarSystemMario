@@ -83,6 +83,7 @@ section .container a {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #221166;
     width: 500px;
     height: 200px;
     overflow: hidden;
