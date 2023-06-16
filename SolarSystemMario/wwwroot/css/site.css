@@ -103,3 +103,14 @@ section div {
 .show {
     display: flex;
 }
+
+.table {
+    position: absolute;
+    background-color: rgb(233 233 233 / 40%);
+    width: 50%;
+}
+
+.background {
+    width: 100%;
+    
+}
