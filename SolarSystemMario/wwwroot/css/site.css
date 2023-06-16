@@ -42,6 +42,9 @@ section {
 }
 
 .lvls {
+    background-image: url(../img/finished_solar_system.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -54,6 +57,7 @@ section {
         display: flex;
         justify-content: center;
         align-items: center;
+        background: rgba(255,255,255, 0.6);
         width: 25vw;
         height: 30vh;
         top: 0;
@@ -145,6 +149,10 @@ section div {
 
 .show {
     display: flex;
+}
+
+.background {
+    width: 100%;
 }
 
 footer {
