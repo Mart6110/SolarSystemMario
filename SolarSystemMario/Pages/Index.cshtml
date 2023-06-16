@@ -4,31 +4,15 @@
     ViewData["Title"] = "Home page";
 }
 
-<section>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.planets[0].Name)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.planets)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        <a asp-page="./Planet" asp-route-id="@item.Id">Details</a>
-                    </td>
-                </tr>
-
-            }
-        </tbody>
-    </table>
+<section class="lvls">
+    @foreach (var item in Model.planets)
+    {
+    <div class="container">
+        <a asp-page="./Planet" asp-route-id="@item.Id">
+            <h1>@Html.DisplayFor(modelItem => item.Name)</h1>
+        </a>
+    </div>
+    }
 </section>
 
 
